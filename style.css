@@ -1,0 +1,661 @@
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  
+}
+
+::selection{
+  background-color:#3f3844;
+  color: #FFFAFA
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+p {
+  font-family: "Roboto", sans-serif;
+}
+/* ----------------------------------------------------------------  ----------------------------------------------------------------------*/
+
+.bg {
+  background: linear-gradient(135deg, #233f5d 0%, #314f6d 100%);
+}
+
+
+/* -------------------------------------------------------------------Health Quote Bar Here -------------------------------------------------------*/
+.health-quote {
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+/*---------------------------------------------------------------------- Navbar Menu---------------------------------------------------------- */
+.navbar {
+  background: linear-gradient(135deg, #0bb3ec 0%, #0470dc 100%);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0px;
+}
+.navbar-items {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.navbar-items a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+header .fas {
+  margin-right: 10px;
+}
+header .fa-chevron-right {
+  margin-left: 20px;
+}
+
+/* ----------------------------------------------------Drop Down Menu in Navbar ---------------------------------------------------------*/
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu-content {
+  display: none;
+  position: absolute;
+  background-color: #c6e2ff;
+
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  z-index: 1;
+}
+.dropdown-menu-content p {
+  background-color: #c6e7f8;
+ 
+  padding: 10px 10px;
+}
+
+.dropdown-menu-content a{
+  color: #0470dc;
+}
+.dropdown-menu-content a:hover{
+  color: white;
+}
+.dropdown-menu-content p:hover {
+  background:#0470dc;
+
+}
+.dropdown-menu:hover .dropdown-menu-content {
+  display: block;
+  width: 150px;
+}
+
+/* -------------------------------------------------Typing Animation-----------------------------------------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #eee;
+}
+
+.container {
+  margin-left: 50px;
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: top;
+}
+
+.container p {
+  font-size: 2rem;
+
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container p span.typed-text {
+  font-weight: normal;
+  color: #dd7732;
+}
+
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.container p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+
+  49% {
+    background-color: #ccc;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ccc;
+  }
+}
+
+/* -------------------------------------------------------- Main section Styling Here ---------------------------------------------------*/
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-left {
+  margin-left: 60px;
+  margin-top: 120px;
+  width: 400px;
+}
+.heading1 {
+  color: #f8e9a1;
+  margin: 20px 0px;
+  font-size: 50px;
+}
+
+
+
+
+ .main-left a {
+   display: inline-block;
+text-decoration: none;
+  font-size: 25px;
+  color: white;
+  background: #ff3232;
+  padding: 10px 30px;
+  border: 0px;
+  margin: 20px auto;
+  border-radius: 15px;
+  width: 60%;
+}
+.main-left a:hover {
+
+ color: #ff3232;
+ background:white ;
+
+}
+
+
+
+.main-left-para {
+  color: white;
+}
+.image {
+  float: right;
+  margin-right: 60px;
+  clear: right;
+}
+
+/* ------------------------------------------- What We Do ( Cards ) Styling Here ------------------------------------ */
+.we-do {
+  background: linear-gradient(135deg, #10d9f6 0%, #0470dc 100%);
+  padding: 10px 0px;
+  padding-bottom: 40px;
+}
+
+.card-bundle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+ 
+}
+.card-bundle a{
+  text-decoration: none;
+  display: inline-block;
+  width: 30%;
+  margin: 40px;
+}
+.heading2 {
+  text-align: center;
+  margin: 20px;
+  color: #f8e9a1;
+  font-size: 50px;
+  font-family: sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2b74b9 0%, #2c639a 100%);
+}
+
+.fas {
+  margin: 10px auto;
+}
+.card h6 {
+  font-size: 40px;
+  margin: 40px 0px;
+  text-align: center;
+  color: #f8e9a1;
+}
+
+/*---------------------------------------------------------------------Features Styling Here-----------------------------------------------  */
+
+.features h3 {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  margin: 50px auto 20px;
+  width: 500px;
+  border-bottom: 2px solid #4981ce;
+}
+.features p {
+  width: 70%;
+  text-align: center;
+  color: white;
+  margin: 50px auto;
+}
+.box-bundle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 30px;
+  margin: 20px;
+}
+.box-bundle h5 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.box {
+  padding: 10px;
+}
+.features .fas {
+  margin-left: 75px;
+  color: white;
+  border: 1px solid #4981ce;
+  padding: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10d9f6 0%, #0470dc 100%);
+}
+
+/* Gallery Styling Here  */
+.gallery {
+  background: linear-gradient(135deg, #5ccff9 0%, #2e2991 100%);
+  padding: 60px;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.block h4 {
+  font-size: 40px;
+  color: #f8e9a1;
+  text-align: center;
+  margin: 20px;
+}
+.block p {
+  font-size: 20px;
+  color: white;
+}
+
+.pic {
+  border-radius: 50%;
+  border: 1px solid #4981ce;
+}
+
+/*----------------------------------------------------------------------Team  Styling Here ---------------------------------------------- */
+
+.team {
+  margin: 0px 30px ;
+  display: flex;
+  flex-direction: row;
+  
+  background: linear-gradient(135deg, #233f5d 0%, #314f6d 100%);
+  column-gap: 20px;
+}
+
+.member {
+    width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 40px 0px;
+  text-align: center;
+  font-family: arial;
+  padding: 10px;
+  background: linear-gradient(135deg, #0ac1c0 0%, #0376d6 100%);
+  color: white;
+}
+
+.team .fab{
+  color: 	#D3D3D3;
+  margin: 5px;
+}
+
+h1 {
+  color: white;
+  font-size: 23px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.member a {
+  text-decoration: none;
+  font-size: 22px;
+ 
+}
+
+.member button:hover {
+  color: white;
+  background-color: black;
+}
+
+/*------------------------------------------------ Newsletter  styling here----------------------------------------------------------*/
+.newsletter {
+  margin: 40px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+
+input ,  textarea{
+  font-size: 20px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+}
+input[type=text]:focus,input[type=email]:focus,textarea:focus {
+  background:linear-gradient(135deg, #2b74b9 0%,#2e537c 100%);
+    border: none;
+    color: white;
+}
+
+
+input[type=submit]{
+  background:linear-gradient(135deg, #2b74b9 0%,#2e537c 100%);
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+input[type=submit]:focus{
+  background:white;
+  color: #2b74b9;
+  border: none;
+}
+
+.field{
+  text-align: center;
+  font-size: 20px;
+  font-family: roboto;
+ color: #808080;;
+}
+
+/*============================================================== Testimonial =========================================================================== */
+
+.testimonial { 
+  display: flex;
+  flex-direction: column;
+}
+
+.reply {
+  width: 60%;
+  margin-left: 700px;
+  margin-bottom: 60px;
+  padding:20px;
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  opacity: 0.1;
+  border-radius: 10%;
+  
+
+}
+.value{display: flex;
+  flex-direction: row;}
+.fa-quote-left{
+  position: relative;
+  top: -35px;
+}
+.testimonial-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+/*=================================================================  Help  ======================================================================= */
+.help{
+  background:linear-gradient(135deg, #0de0b7 0%,#036ED9 100%);
+  padding: 30px 40px;
+  margin: 50px 0px 0px;
+}
+
+.help h3{
+  font-size: 30px;
+text-align: center;
+margin: 30px;}
+  
+.direct-message{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px 0px 50px;
+}
+
+
+
+
+
+
+
+/*=================================================================   The Footer  ======================================================================= */
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .foot {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer p {
+  color: #999;
+}
+footer .foot h6 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+footer .foot .sec-about-us {
+  margin-right: 30px;
+  width: 40%;
+}
+
+/* For the line below h2*/
+footer .foot h6:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+
+/*============== All Social media links============*/
+
+.social-menu ul {
+  position: absolute;
+  top: 70%;
+  left: 21%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.social-menu ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.fab {
+  color: white;
+
+  font-size: 25px;
+
+  transition: 0.5s;
+}
+
+.social-menu ul li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 10px; /* I can not adjust icons in the center of the circle therefore given paddind at the top*/
+
+  transition: 0.5s;
+  transform: translate(0, 0px);
+  box-shadow: 0px 7px 7px gainsboro;
+}
+.social-menu ul li a:hover {
+  transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+  background-color: #0077b5;
+}
+
+/*-========================  Quicklinks styling here=================================*/
+.quicklinks {
+  position: relative;
+  width: 25%;
+}
+.quicklinks h6 {
+  margin-bottom: 20px;
+}
+.quicklinks ul li {
+  list-style: none;
+}
+.quicklinks ul li a {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.quicklinks ul li a:hover {
+  color: #00b2ee;
+}
+
+.footer-icon {
+  color: #999999;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/*==================================   Contact Details styling here======================*/
+.sec-contacts {
+  width: calc(35% - 60px);
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sec-contacts .info {
+  position: relative;
+
+  margin-bottom: 16px;
+}
+
+.sec-contacts .info li div {
+  color: #999;
+
+  margin-right: 10px;
+}
+.sec-contacts .info li  {
+  list-style-type: none;
+}
+.sec-contacts .info pre {
+  color: #999;
+  font-family: arial;
+}
+.info li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+
+}
+.sec-contacts .info li a:hover {
+  color: #00b2ee;
+  
+}

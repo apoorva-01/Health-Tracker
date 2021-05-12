@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<!--This website is made by Apoorva Verma-->
+
+<head>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta description="Track Your Health">
+    <meta author="Apoorva Verma">
+    <title>Track Your Health</title>
+
+    <!--CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icon Attachments -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web\css\all.css">
+
+
+    <!-- Animations  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet"
+        href="hover.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=M+PLUS+Rounded+1c:wght@700&family=Roboto&display=swap"
+        rel="stylesheet">
+
+
+
+
+
+
+
+    
+<style>
+
+
+.box1{
+    display: flex;
+    flex-direction: row;
+}
+.result1{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+}
+.result2{
+    position: absolute;
+    top: 130%;
+    left: 60%;
+}
+    .calc{
+	width: 600px;
+	margin: 45px 0 0 50px;
+	border-radius: 10px;
+    border: none;
+	box-shadow: 1px 1px 5px #808080;
+	padding: 10px ;
+    font-size: 30px;
+    background:linear-gradient(135deg, #0791e4 0%,#0470dc 100%);
+    
+}
+.calc h2{
+    text-align: center;
+    color: palegoldenrod;
+}
+
+label {
+	float: left;
+	width: 140px;
+	display: block;
+	clear: left;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+    font-size: 20px;
+}
+
+
+button  {
+  background: #ff3232;
+  color: white;
+ 
+  padding: 10px 0px;
+  border: 0px;
+  margin: 20px 0px 10px 80px;
+  border-radius: 15px;
+  width: 60%;
+}
+
+button:hover {
+    box-shadow: 1px 1px 16px 	#808080;
+    border:2px solid white;
+   
+
+}
+.fas{
+    margin: 10px 10px;
+}
+
+input {
+	margin-top: 10px;
+	display: block;
+	text-align: right;
+	width: 128px;
+}
+
+
+#bmi_label {
+	width: 200px;
+}
+
+#bmi {
+	width: 66px;
+}
+
+
+
+.observation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 50px 0px;
+}
+
+
+table{
+   
+    margin: 40px auto;
+    padding: 20px 40px;
+
+   
+}
+tr,td{
+    border: 2px solid  #f8e9a1;;
+    padding: 20px 40px;
+    
+}
+th{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.bmi-pic{
+    position: relative;
+    bottom: 600px;
+}
+
+
+</style>
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+
+
+<body class="bg">
+
+    <!-----------------------------------------Health Quote--------------------------------------------------------------->
+    <div class=" health-quote "><i>" Keep care of your body because this is the only place where you have to live in "</i>
+    </div>
+
+    <!------------------------------------------ Navbar Menu---------------------------------------------------------------->
+    <header>
+        <div id="home" class="navbar">
+
+            <div class="navbar-items hvr-grow-shadow hvr-underline-from-right"><a href="index.html"><i class="fas fa-home"></i>Home</a></div>
+            <div class="navbar-items hvr-grow-shadow  hvr-underline-from-right"><a href="index.html"><i class="fas fa-hands-helping"></i>Our Services</a>
+            </div>
+            <div class="navbar-items hvr-grow-shadow  hvr-underline-from-right"><a href="#contact-us"><i class="fas fa-phone-alt"></i>Contact Us</a>
+            </div>
+
+    </header>
+
+ <!---------------------------------------------------- Main Section  ----------------------------------------------------------->
+
+
+
+    <!------------------------------------------Standard  BMI Calculator ---------------------------------------------------------------->
+
+
+    <form action="none" method="post" name="bmiform1">
+        <div class="box1">
+        
+            
+                <div data-aos="fade-up" class="calc">
+                    <h2>Standard</h2>
+                    <label for="pounds">Weight (Pounds):</label>
+                    <input type="text" name="pounds" id="pounds">
+                    <br>
+                    <label  for="inches">Height (Inches):</label>
+                    <input type="text" name="inches" id="inches">
+                    <br>
+    
+    
+                    <button type="button" name="calculate" value="Calculate your BMI" onclick="calcstandardBMI()">Calculate your BMI<i class="fas fa-chevron-right fa-xs"></i></button>
+                </div>
+            
+            <div data-aos="fade-up" class="result1">
+                <label for="bmi1" id="bmi1_label">Your calculated BMI is:</label>
+                    <input type="text" name="bmi1" id="bmi1" readonly="readonly">
+            </div>
+        </div>
+    </form>
+    
+    
+        <!------------------------------------------ Metric  BMI Calculator ---------------------------------------------------------------->
+    
+    
+    
+    
+    
+    
+    <form action="none" method="post" name="bmiform2">
+        <div class="box1">
+        
+            
+                <div data-aos="fade-up" class="calc">
+                    <h2>Metric</h2>
+                    <label for="kg">Weight (Kilogram):</label>
+                    <input type="text" name="kg" id="kg">
+                    <br>
+                    <label  for="cm">Height (cm):</label>
+                    <input type="text" name="cm" id="cm">
+                    <br>
+    
+    
+                    <button type="button" name="calculate" value="Calculate your BMI" onclick="calcmetricBMI()">Calculate your BMI<i class="fas fa-chevron-right fa-xs"></i></button>
+                </div>
+            
+            <div data-aos="fade-up" class="result2">
+                <label for="bmi2" id="bmi2_label">Your calculated BMI is:</label>
+                    <input type="text" name="bmi2" id="bmi2" readonly="readonly">
+            </div>
+        </div>
+    </form>
+    
+        <!------------------------------------------ BMI Observation ---------------------------------------------------------------->
+    
+    
+    
+    <div  class="observation">
+        <div data-aos="fade-up" class="img" style="width: 60%;margin:  50px  0px 30px 190px;">
+            <h1 style="text-align: center;font-size: 40px;color:  #f8e9a1;">BMI Index</h1>
+           <p style="font-size: 20px;"> Body mass index is a value derived from the mass and height of a person.<br> <br> BMI is defined a
+               ass divided by the square of the body height, and is expressed in units of kg/m², resulting 
+               from mass in kilograms and height in metres.</p>
+        </div>
+    
+    
+    
+         <div data-aos="fade-left"class="table" >
+             
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>BMI</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>16.0 and less</td>
+                <td>Severely Underweight</td>
+            </tr>
+            <tr>
+                <td>16.0 - 18.4</td>
+                <td>Underweight</td>
+            </tr>
+            <tr>
+                <td>18.5 - 24.9	</td>
+                <td>Normal</td>
+            </tr>
+            <tr>
+                <td>25.0 - 29.9	</td>
+                <td>Overweight</td>
+            </tr>
+            <tr>
+                <td>30.0 - 34.9</td>
+                <td>	Moderately Obese</td>
+            </tr>
+            <tr>
+                <td>35.0 - 39.9</td>
+                <td>Severely Obese</td>
+            </tr>
+            <tr>
+                <td>40.0 and more</td>
+                <td>Morbidly Obese</td>
+            </tr>
+         
+        </tbody>
+    </table>
+         </div>
+    </div>
+    
+    
+    <div data-aos="fade-up" class="bmi-pic ">
+        <img src="—Pngtree—female doctor wearing mask_6037134.png" alt="" width="500px">
+    </div>
+    
+    
+
+ 
+    <!---------------------------------------------  Footer   ----------------------------------------------------------------------------------->
+
+
+    <footer>
+        <div class="foot">
+            <div class="sec-about-us">
+                <h6>About Us</h6>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, r.</p>
+
+                <div class="social-menu">
+
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="quicklinks">
+                <h6 style="margin-top:0px">Quick Links</h6>
+                <ul>
+                    <li><i class=" hvr-pulse-grow  footer-icon  fas fa-address-card"></i><a href="#">About</a></li>
+                    <li><i class=" hvr-pulse-grow  footer-icon  fas fa-question-circle"></i><a href="#">FAQ</a></li>
+                    <li><i class=" hvr-pulse-grow  footer-icon  fas fa-user-secret"></i><a href="#">Privacy Policy</a>
+                    </li>
+                    <li><i class=" hvr-pulse-grow  footer-icon  fas fa-hands-helping"></i><a href="#">Help</a></li>
+                    <li><i class=" hvr-pulse-grow  footer-icon  fas fa-briefcase"></i><a href="#">Terms & Conditions</a>
+                    </li>
+                    <li><i class=" hvr-pulse-grow  footer-icon  fas fa-users"></i><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <div id="contact-us"  class="sec-contacts ">
+                <h6>Contacts Information</h6>
+                <ul class="info">
+                    <li>
+
+                        <div>
+                            <i class="fas fa-map-marker-alt hvr-pulse-grow "></i>
+                            &nbsp &nbsp Building:<br>
+                            &nbsp &nbsp &nbsp &nbsp Street Name:<br>
+                            &nbsp &nbsp &nbsp &nbsp Country:<br>
+
+                        </div>
+
+                    </li>
+                    <br>
+                    <li>
+
+                        <p><i class=" fa fa-phone hvr-pulse-grow " aria-hidden="true"></i> &nbsp &nbsp Telephone-No: <a
+                                href="tel:123456789">+1 222 222 0000</a></p><br>
+                        <p><i class=" fa fa-phone hvr-pulse-grow " aria-hidden="true"></i> &nbsp &nbsp Telephone-No: <a
+                                href="tel:123456789">+1 222 222 0000</a></p>
+                    </li>
+                    <br>
+                    <li>
+
+                        <p><i class=" fa fa-envelope  hvr-pulse-grow " aria-hidden="true"></i>&nbsp&nbsp &nbsp Email-Us:
+                            &nbsp&nbsp&nbsp
+                            <a href="mailto:example@gmail.com">example@gmail.com</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!------------------------------------------------  AOS Animation JS ------------------------------------------------------------------------------------>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+
+
+
+        AOS.init();
+
+        // You can also pass an optional settings object
+        // below listed default settings
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 450, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        });
+
+
+    </script>
+
+
+
+    <!------------------------------------------ BMI Calculator JS File ---------------------------------------------------------------->
+
+
+    <script>
+    
+        function calcstandardBMI() {
+            var weight = document.bmiform1.pounds.value, height = document.bmiform1.inches.value;
+            document.bmiform1.bmi1.value = parseInt((weight * 703) / (height * height));
+          } 
+    
+    </script>
+    
+    
+    <script>
+        
+        function calcmetricBMI() {
+            var weight = document.bmiform2.kg.value, height = document.bmiform2.cm.value;
+            document.bmiform2.bmi2.value = parseInt((weight *10000) / (height * height));
+          } 
+    
+    </script>
+    </body>
+    </html>
